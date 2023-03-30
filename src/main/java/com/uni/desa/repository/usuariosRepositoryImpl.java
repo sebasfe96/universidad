@@ -22,10 +22,16 @@ public class usuariosRepositoryImpl extends JdbcDaoSupport{
 	public usuariosRepositoryImpl(DataSource dataSource) {
 		setDataSource(dataSource);
 	}
-	
+	/**
+	 * metodo encragado de gestionar los parametros de la peticion enviadolas a la base de datos para devolver 
+	 * informacion
+	 */
 	public usuariosDTO getUsuariosByUsuacodi(Long usuacodi) {
 		String SQL="select t.* from usuarios t where t.usuacodi =?";
 		
+		/**
+		 * setter donde pasamos los parametros de la ocnsulta
+		 */
 				PreparedStatementSetter setter = new PreparedStatementSetter() {
 					
 					@Override
