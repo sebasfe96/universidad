@@ -23,16 +23,32 @@ public class usuarios implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	private Long usuacodi;
+	private Integer usuacodi;
 	private String usuanomb;
 	private Long usuaedad;
 	private String usuaemail;
 	private String usuadire;
 	private String usuatele;
-	public Long getUsuacodi() {
+	private Long usuacamp;
+	private Long usuaesta;
+	
+	public Long getUsuacamp() {
+		return usuacamp;
+	}
+	public void setUsuacamp(Long usuacamp) {
+		this.usuacamp = usuacamp;
+	}
+	public Long getUsuaesta() {
+		return usuaesta;
+	}
+	public void setUsuaesta(Long usuaesta) {
+		this.usuaesta = usuaesta;
+	}
+	
+	public Integer getUsuacodi() {
 		return usuacodi;
 	}
-	public void setUsuacodi(Long usuacodi) {
+	public void setUsuacodi(Integer usuacodi) {
 		this.usuacodi = usuacodi;
 	}
 	public String getUsuanomb() {
